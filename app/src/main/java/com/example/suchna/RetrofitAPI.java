@@ -1,0 +1,14 @@
+package com.example.suchna;
+
+import retrofit2.Call;
+import com.example.suchna.R;
+import retrofit2.http.GET;
+import retrofit2.http.Url;
+
+public interface RetrofitAPI {
+    @GET
+    Call<NewsModal> getAllNews(@Url String url);
+
+    @GET
+    Call<NewsModal>getNewsByCategory(@Url String url);
+}
